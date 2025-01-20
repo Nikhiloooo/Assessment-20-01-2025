@@ -5,7 +5,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class TextViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    var myTextView: TextView = itemView.findViewById<TextView>(R.id.text_item)
+    var myTextView: TextView = itemView.findViewById(R.id.text_item)
 
 
 }

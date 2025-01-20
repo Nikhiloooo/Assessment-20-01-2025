@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TextAdapter : RecyclerView.Adapter<TextViewHolder>() {
+class TextAdapter() : RecyclerView.Adapter<TextViewHolder>() {
 
     private var mutableList = mutableListOf(
         "Mercury",
