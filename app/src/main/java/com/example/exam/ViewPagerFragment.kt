@@ -6,10 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.exam.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.example.exam.ViewPagerAdapter
 
 class ViewPagerFragment :Fragment() {
     override fun onCreateView(
@@ -29,9 +27,9 @@ class ViewPagerFragment :Fragment() {
 
         val viewPager: ViewPager2 = view.findViewById(R.id.view_pager)
         val tabLayout: TabLayout = view.findViewById(R.id.tab_layout)
-
-        val adapter = ViewPagerAdapter(this)
-        adapter.addFragment(FirstTabFragment(), "Tab 1")
+       val fragmentOne = FirstTabFragment()
+        val adapter = ViewPagerAdapter(requireActivity())
+        adapter.addFragment(fragmentOne, "Tab 1")
         adapter.addFragment(SecondTabFragment(), "Tab 2")
         viewPager.adapter = adapter
 

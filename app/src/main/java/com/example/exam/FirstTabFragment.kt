@@ -1,6 +1,6 @@
 package com.example.exam
 
-import android.app.Fragment
+
 import android.widget.TextView
 
 
@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.exam.R
 
 class FirstTabFragment : Fragment() {

@@ -1,11 +1,11 @@
 package com.example.exam
 
-import android.app.Fragment
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.exam.FirstTabFragment
-import com.example.exam.SecondTabFragment
 
-class ViewPagerAdapter(fragment: Fragment) :FragmentStateAdapter(fragment){
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+
+class ViewPagerAdapter(fragment: FragmentActivity) :FragmentStateAdapter(fragment){
     private val mFragmentList: MutableList<Fragment> = ArrayList()
     private val mFragmentTitleList: MutableList<String> = ArrayList()
 
@@ -14,7 +14,7 @@ class ViewPagerAdapter(fragment: Fragment) :FragmentStateAdapter(fragment){
         return mFragmentList.size
     }
 
-    override fun createFragment(position: Int): Fragment {
+    override fun createFragment(position: Int):Fragment {
         return mFragmentList[position]
     }
 
